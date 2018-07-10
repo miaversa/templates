@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta charset="utf-8" />
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}" />
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	{% block socialmedia %}
+	{% endblock %}
+
+	<meta name="theme-color" content="#5E2CA5"/>
+	<meta name="robots" content="index, follow" />
+
+	{{ include('components/icons.html') }}
+
+	<style>body{color:#333}</style>
+</head>
+
+<body class="bg-white black-70 sans-serif">
+
+{{ include('components/header.html') }}
+
+{% block main %}
+{% endblock %}
+
+{{ include('components/footer.html') }}
+
+</body>
+</html>

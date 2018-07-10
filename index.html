@@ -1,2 +1,71 @@
-Hello {{ name }}
 
+{% extends "base.html" %}
+
+{% block main %}
+
+<main class="center pa3 cf mw8">
+	<div class="fl w-100 w-third-ns pa2">
+		<a href="/anel-lua-nova/" class="db link dim tc" title="Conheça o anel Lua Nova">
+			<h2 class="purple f4">Anel Lua Nova</h2>
+			
+			<div class="ba br1 pa2 b--black-10">
+			<img
+			src="/imagens/produtos/anel-lua-nova/anel-lua-nova-grid-sm-01.jpg"
+			srcset="/imagens/produtos/anel-lua-nova/anel-lua-nova-grid-g-01.jpg 2x"
+			class="w-100 db outline black-10"
+			alt="Anel de prata inspirado na faze da lua nova" /></div>
+
+			<dl class="mt2 f6 lh-copy">
+				<dt class="clip">Metal</dt>
+				<dd class="ml0 purple">Prata 950</dd>
+				<dt class="clip">Preço</dt>
+				<dd class="ml0 gray">R$ 200,00</dd>
+			</dl>
+
+		</a>
+	</div>
+
+	<div class="fl w-100 w-third-ns pa2">
+		<a href="/pulseira-lumineux/" class="db link dim tc" title="Conheça mais sobre a pulseira Lumineux">
+			<h2 class="purple f4">Pulseira Lumineux</h2>
+			
+			<div class="ba br1 pa2 b--black-10">
+			<img
+			src="/imagens/produtos/pulseira-lumineux/pulseira-lumineux-grid-sm-01.jpg"
+			srcset="/imagens/produtos/pulseira-lumineux/pulseira-lumineux-grid-g-01.jpg 2x"
+			class="w-100 db outline black-10"
+			alt="Pulseira com acabamento polido brilhante" /></div>
+
+			<dl class="mt2 f6 lh-copy">
+				<dt class="clip">Metal</dt>
+				<dd class="ml0 purple">Prata 950</dd>
+				<dt class="clip">Preço</dt>
+				<dd class="ml0 gray">R$ 290,00</dd>
+			</dl>
+
+		</a>
+	</div>
+
+	<div class="fl w-100 w-third-ns pa2">
+		<a href="anel-vinculo/" class="db link dim tc" title="Conheça mais sobre o anel Vínculo">
+			<h2 class="purple f4">Anel Vínculo</h2>
+			
+			<div class="ba br1 pa2 b--black-10">
+			<img
+			src="/imagens/produtos/anel-vinculo/anel-vinculo-grid-sm-01.jpg"
+			srcset="/imagens/produtos/anel-vinculo/anel-vinculo-grid-g-01.jpg 2x"
+			class="w-100 db outline black-10"
+			alt="Anel com curvas formando um v de vínculo" /></div>
+
+			<dl class="mt2 f6 lh-copy">
+				<dt class="clip">Metal</dt>
+				<dd class="ml0 purple">Prata 950</dd>
+				<dt class="clip">Preço</dt>
+				<dd class="ml0 gray">R$ 145,00</dd>
+			</dl>
+
+		</a>
+	</div>
+</main>
+
+{% endblock %}

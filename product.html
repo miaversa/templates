@@ -1,0 +1,81 @@
+
+{% block main %}
+
+<main class="center pa3 cf mw8">
+
+	<!-- FIRST BLOCK -->
+	<div class="fl w-100 w-50-ns pa2">
+		<div class="ba br1 pa2 b--black-10">
+			<a href="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-01-1000.jpg">
+				<img
+				class="w-100 db outline black-10"
+				src="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-01-500.jpg"
+				srcset="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-01-1000.jpg 2x" />
+			</a>
+		</div>
+
+		<div class="cf mt2">
+			<div class="fl w-third pa1">
+				<div class="ba br1 pa1 b--black-10">
+					<a href="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-1000.jpg">
+						<img
+						class="w-100 br1 ma0 pa0"
+						src="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-500.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="fl w-third pa1">
+				<div class="ba br1 pa1 b--black-10">
+					<a href="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-1000.jpg">
+						<img
+						class="w-100 br1 ma0 pa0"
+						src="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-500.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="fl w-third pa1">
+				<div class="ba br1 pa1 b--black-10">
+					<a href="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-1000.jpg">
+						<img
+						class="w-100 br1 ma0 pa0"
+						src="/imagens/produtos/{{.Product.Slug}}/{{.Product.Slug}}-flex-02-500.jpg" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- EEEND FIRST BLOCK -->
+
+	<div class="fl w-100 w-50-ns pa2">
+		<h2 class="purple f3 mt0">{{ .Product.Name }}</h2>
+
+		<div class="tr">
+
+			<p class="fw9 purple tr">R$ {{.Product.Price}},00</p>
+
+			<form target="pagseguro" method="post" action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add">  
+				<!-- Campos obrigatórios -->
+				<input type="hidden" name="receiverEmail" value="daniela@miaversa.com.br">
+				<input type="hidden" name="currency" value="BRL">
+
+				<!-- Itens do pagamento (ao menos um item é obrigatório) -->
+				<input type="hidden" name="itemId" value="{{.Product.Sku}}">
+				<input type="hidden" name="itemDescription" value="{{.Product.Name}}">
+				<input type="hidden" name="itemAmount" value="{{.Product.Price}}.00">
+				<input type="hidden" name="itemQuantity" value="1">
+				<input type="hidden" name="itemWeight" value="200">
+
+				<input type="hidden" name="encoding" value="UTF-8">
+
+				<!-- submit do form (obrigatório) -->
+				<input type="image" name="submit" src="/imagens/media/botao-pagseguro.gif" alt="Pague com PagSeguro">
+			</form>
+		</div>
+
+		<div>
+			{{ .Product.HTML }}
+		</div>
+	</div>
+</main>
+
+{% endblock %}
